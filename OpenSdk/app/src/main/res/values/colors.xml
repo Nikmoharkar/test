@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Generic colors in the app-->
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="gray">#ADACAC</color>
+
+    <!-- Colors used in app -->
+    <color name="color_title">@color/black</color>
+    <color name="color_title_text">@color/white</color>
+    <color name="transparent">#00000000</color>
+    <color name="grey">#c6c0c0</color>
+    <color name="blueColor">#2b3ae2</color>
+    <color name="redColor">#ff0000</color>
+</resources>

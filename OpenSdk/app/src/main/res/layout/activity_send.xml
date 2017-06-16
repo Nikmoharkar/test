@@ -1,0 +1,236 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/backgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/socialAppIconsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLogo">
+
+        <GridView
+            android:id="@+id/socialAppIconsGridView"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/transparent"
+
+            android:horizontalSpacing="10dp"
+            android:numColumns="4"
+
+            android:verticalSpacing="10dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/bottomLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/fc_sociallinked_white" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_02" />
+
+            <ImageView
+                android:id="@+id/wechat"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_03" />
+
+            <ImageView
+                android:id="@+id/linkedin"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_04" />
+
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_05" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_06" />
+
+            <ImageView
+                android:id="@+id/sms"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_07" />
+
+            <ImageView
+                android:id="@+id/googleplus"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_08" />
+
+            <ImageView
+                android:id="@+id/instagram"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_09" />
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/viber"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_10" />
+
+            <ImageView
+                android:id="@+id/hangout"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_11" />
+
+            <ImageView
+                android:id="@+id/whatsapp"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_12" />
+
+            <ImageView
+                android:id="@+id/email"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_13" />
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/skype"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_14" />
+
+
+            <ImageView
+                android:id="@+id/snapchat"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_15" />
+
+            <ImageView
+                android:id="@+id/hike"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_16" />
+
+            <ImageView
+                android:id="@+id/kakaotalk"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_17" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/vk"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_18" />
+
+            <ImageView
+                android:id="@+id/zalo"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_19" />
+
+            <ImageView
+                android:id="@+id/odokassniki"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_20" />
+
+            <ImageView
+                android:id="@+id/messenger"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_21" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/gmail"
+                android:layout_width="@dimen/icon_height"
+                android:layout_height="@dimen/icon_height"
+                android:onClick="buttonClick"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_22" />
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>

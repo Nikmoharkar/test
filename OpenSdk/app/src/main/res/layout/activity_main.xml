@@ -1,0 +1,718 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fastacash.demo.MainActivity">
+
+    <ScrollView
+        android:id="@+id/fastaLinkScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Hello friends. This is a text I want to share with fastashare. I hope you will like this message when you get it on your social messenger" />
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_below="@id/text1"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/photo2" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image1"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:text="Screenshot" />
+
+            <RelativeLayout
+                android:id="@+id/fastaShortenRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button1">
+
+                <RelativeLayout
+                    android:id="@+id/shortenUrlRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/shape_rectangle_gray_round_edge">
+
+                    <EditText
+                        android:id="@+id/urlEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/shortenButton"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/httpText"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <Button
+                        android:id="@+id/shortenButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/shape_rectangle_gray_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:text="@string/shortenCapsText"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fastalinkRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shortenUrlRelativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/fastalinkTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/fastaLinkText"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/fastaLinkEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/fastalinkTextView"
+                        android:background="@drawable/shape_rectangle_gray_round_edge"
+                        android:gravity="center_vertical"
+                        android:hint="@string/customizeYourUrlText"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/shortlinkRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fastalinkRelativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/grey" />
+
+                    <TextView
+                        android:id="@+id/customUrlTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:autoLink="web"
+                        android:gravity="center"
+                        android:linksClickable="true"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textColorLink="@color/blueColor"
+                        android:textSize="16dp" />
+
+                    <Button
+                        android:id="@+id/copyButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/customUrlTextView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/shape_rectangle_gray_round_edge"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="50dp"
+                        android:paddingRight="50dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/copyCapsText"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/customDivider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/fastaShortenRelativeLayout"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:id="@+id/fastSecureUrlRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customDivider"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/SecureUrlRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/shape_rectangle_gray_round_edge"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp"
+                    android:textColor="@color/black">
+
+                    <EditText
+                        android:id="@+id/fastSecureUrlEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/httpText"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fastaSecurelinkRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/SecureUrlRelativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/fastalinkSecureTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/fastaLinkText"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/fastaLinkSecureEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/fastalinkSecureTextView"
+                        android:background="@drawable/shape_rectangle_gray_round_edge"
+                        android:gravity="center_vertical"
+                        android:hint="@string/customizeYourUrlText"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/fastaSecureItemLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fastSecureUrlRelativeLayout"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp">
+                <!--fasta short secure linear layouut-->
+                <LinearLayout
+                    android:id="@+id/fastasSecuerUrlLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/fastasSecuerUrlTextVIew"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/grey" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pinRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical">
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/pinTextVIew"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:text="@string/pinCapsText"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="16dp" />-->
+
+                    <EditText
+                        android:id="@+id/pinEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/pinCapsText"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/grey" />
+
+                <LinearLayout
+                    android:id="@+id/clicksLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/clicksTextVIew"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="@string/clicksCapsText"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/clicksSpecifyTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:visibility="invisible" />
+                    <!--android:hint="@string/specifyText"-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/numberOfClicksLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <EditText
+                        android:id="@+id/numberOfClicksEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/numberOfClicksText"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/grey" />
+
+                <RelativeLayout
+                    android:id="@+id/unlimitedClicksLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/unlimitedClicksEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/unlimitedClicksCheckBox"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/unlimitedClicksText"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <CheckBox
+                        android:id="@+id/unlimitedClicksCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:gravity="center_vertical" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/grey" />
+
+                <RelativeLayout
+                    android:id="@+id/expiratinDateRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/expiratinDateTextVIew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="@string/expirationDateAndTimeCapsText"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/expirationDateEterTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/expiratinDateTextVIew"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+                    <!--android:hint="@string/enterText"-->
+
+                    <EditText
+                        android:id="@+id/TimeZoneEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/expiratinDateTextVIew"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="Time Zone"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <View
+                        android:id="@+id/divider5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_below="@+id/TimeZoneEditText"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/grey" />
+
+                    <LinearLayout
+                        android:id="@+id/expirationDateItemLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider5"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/yearEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:gravity="center"
+                                android:hint="(YYYY)"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+                            <View
+                                android:id="@+id/divider6"
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:layout_below="@+id/yearEditText"
+                                android:background="@color/grey" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/monthEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:gravity="center"
+                                android:hint="(MMM)"
+                                android:maxLength="3"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+                            <View
+                                android:id="@+id/divider7"
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:layout_below="@+id/monthEditText"
+                                android:background="@color/grey" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/dateEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:gravity="center"
+                                android:hint="(DD)"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+                            <View
+                                android:id="@+id/divider8"
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:layout_below="@+id/dateEditText"
+                                android:background="@color/grey" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/expirationDateItemLinearLayout"
+                        android:layout_marginLeft="5dp"
+
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="2">
+
+                            <EditText
+                                android:id="@+id/hourEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:gravity="center"
+                                android:hint="(HH)"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+                            <View
+                                android:id="@+id/divider9"
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:layout_below="@+id/hourEditText"
+                                android:background="@color/grey" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/minuteEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:gravity="center"
+                                android:hint="(mm)"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+                            <View
+                                android:id="@+id/divider10"
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:layout_below="@+id/minuteEditText"
+                                android:background="@color/grey" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/fastaSecureShortenUrlButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/customUrlTextView"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape_rectangle_gray_round_edge"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/shortenUrlCapsText"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/fastaSecureCopyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/customUrlTextView"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape_rectangle_gray_round_edge"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/copyCapsText"
+                    android:textSize="16dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

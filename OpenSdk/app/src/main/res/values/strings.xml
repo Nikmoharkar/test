@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Fastacash</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="appIsNotInstalledText">app is not installed on your phone</string>
+    <string name="mayNotBeInstalledCorrectlyText">may not be installed correctly</string>
+    <string name="httpText">http://</string>
+    <string name="shortenCapsText">SHORTEN</string>
+    <string name="fastaLinkText">fasta.link/</string>
+    <string name="customizeYourUrlText">customise your url</string>
+    <string name="copyCapsText">COPY</string>
+    <string name="createText">create</string>
+    <string name="pinCapsText">PIN</string>
+    <string name="clicksCapsText">CLICKS</string>
+    <string name="specifyText">specify</string>
+    <string name="expirationDateAndTimeCapsText">EXPIRY DATE &amp; TIME</string>
+    <string name="numberOfDaysForExpireText">NUMBER OF DAYS FOR EXPIRE</string>
+    <string name="enterText">enter</string>
+    <string name="shortenUrlCapsText">SHORTEN URL</string>
+    <string name="numberOfClicksText">Specify no. of clicks</string>
+    <string name="unlimitedClicksText">Unlimited clicks</string>
+    <string name="title_activity_fasta_sample">FastaSample</string>
+    <string name="fastaShareText">Fasta Share</string>
+    <string name="fastaShortText">Fasta Short</string>
+    <string name="fastaSecureShortText">Fasta Secure Short</string>
+    <string name="fastaShotText">Fasta Shot</string>
+    <string name="fastaScreenShotText">Fasta Screen Shot</string>
+    <string name="title_activity_end_user">EndUserActivity</string>
+    <string name="pinMendatoryText">"Pin" should not be empty.</string>
+    <string name="invalidUrlTect">"Url" is not valid.</string>
+    <string name="okCapsText">OK</string>
+    <string name="maxClicksText">"Clicks" should not exceed 1 million.</string>
+    <string name="maxExpirationDaysText">No. of days for expiry should be between 1 to 14.</string>
+
+    <string name="share_text">Share</string>
+    <string name="network_not_available">Please check internet connection and try again.</string>
+
+</resources>
