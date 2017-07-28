@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Smart Factory</string>
+
+    <string name="no_internet_txt">"Check your network connection or WIFI. "</string>
+    <string name="ok_txt">"OK"</string>
+    <string name="cancel_txt">"CANCEL "</string>
+    <string name="alert_txt">"Alert"</string>
+
+    <!-- Error text for network validations -->
+    <string name="noInternetTxt">"Check your network connection or WIFI. "</string>
+    <string name="timeOutTxt">"Bad network connection. \nPlease check your network settings."</string>
+    <string name="serverError">"Internal server error, \nPlease try again later."</string>
+    <string name="unknownErrorMsg">"Something went wrong, \nPlease try again later."</string>
+
+    <!-- Error text for Login validations -->
+    <string name="username_empty">"Please enter username."</string>
+    <string name="username_invalid">"Please enter valid username."</string>
+    <string name="username_contain_space">"Username could not contain space."</string>
+
+    <string name="password_empty">"Password should contain at least 6 characters."</string>
+    <string name="password_invalid">"Please enter valid password."</string>
+    <string name="password_contain_space">"Password could not contain space."</string>
+
+    <string name="incorrect_password">"Incorrect password."</string>
+    <string name="incorrect_username">"Incorrect username."</string>
+    <string name="incorrect_username_password">"Invalid username or password."</string>
+
+    <string name="empty">"Field can not be empty. "</string>
+
+
+    <!--Network string for progress-->
+    <string name="processing">"Processing..."</string>
+    <string name="loading_data">"loading... data"</string>
+    <string name="loading">"Loading..."</string>
+    <string name="loginMsg">"Logging in..."</string>
+    <string name="logoutMsg">"Logging out..."</string>
+    <string name="pleaseWaitMsg">"Please Wait..."</string>
+    <string name="checking_permission">"Checking Permission..."</string>
+    <string name="fetching_mo_list">Fetching MO List</string>
+    <string name="loading_MO_details">Loading MO Details</string>
+
+</resources>
